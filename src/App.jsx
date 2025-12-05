@@ -106,17 +106,17 @@ export default function App() {
     >
       {/* Top tab nav */}
       <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-8 sm:gap-10 bg-ink/60 backdrop-blur border border-bone/20 rounded-full px-12 sm:px-14 py-6 text-2xl sm:text-3xl uppercase tracking-widerish shadow-2xl shadow-black/40">
+        <nav className="flex items-center gap-8 sm:gap-10 bg-ink/70 backdrop-blur border border-meadow/40 rounded-full px-12 sm:px-14 py-6 text-2xl sm:text-3xl uppercase tracking-widerish shadow-2xl shadow-black/40">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-12 sm:px-16 py-5 sm:py-6 min-w-[170px] sm:min-w-[200px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow-lg border border-bone/30 ${
+              className={`px-12 sm:px-16 py-5 sm:py-6 min-w-[170px] sm:min-w-[200px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow-lg ${
                 activeTab === tab.id
-                  ? "bg-bone text-ink shadow-bone/50"
-                  : "text-bone/85 hover:bg-meadow hover:text-ink hover:border-meadow/70"
+                  ? "bg-meadow text-ink border border-meadow shadow-meadow/50"
+                  : "text-bone/85 border border-bone/30 hover:bg-bone/10 hover:border-bone/60"
               }`}
             >
               {tab.label}
@@ -149,21 +149,21 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
+                className="bg-gradient-to-br from-meadow to-bone text-ink border border-meadow/80 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:from-bone hover:to-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px] mt-4 md:mt-0"
+                className="bg-gradient-to-br from-meadow to-bone text-ink border border-meadow/80 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:from-bone hover:to-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px] mt-4 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
+                className="bg-gradient-to-br from-meadow to-bone text-ink border border-meadow/80 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:from-bone hover:to-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
               >
                 Contact
               </button>
@@ -326,7 +326,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab("projects")}
-              className="mt-10 border border-meadow/70 bg-meadow text-ink px-20 py-10 rounded-full text-2xl uppercase tracking-widerish hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-bold"
+              className="mt-10 border border-meadow/80 bg-gradient-to-br from-meadow to-bone text-ink px-20 py-10 rounded-full text-2xl uppercase tracking-widerish hover:from-bone hover:to-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-bold"
             >
               View Projects
             </button>
