@@ -12,18 +12,20 @@ const projects = [
     description:
       "Web app that automates social analytics and delivers data-driven recommendations from Figma specs to production UI.",
     tags: ["React", "Tailwind", "Data viz"],
+    link: {
+      href: "https://www.figma.com/proto/nSEFJQpmWMuCUcJgRgJY3F/Analytico-Storyboard?node-id=1-5&starting-point-node-id=1%3A5&t=ZeobGc86GxGjPhve-1",
+      label: "View Figma storyboard",
+    },
   },
   {
     title: "SGS Tutor — Audio-to-Text Matching",
     description:
       "Accessibility feature that pairs spoken verses with on-screen text to help learners memorize and review quickly.",
     tags: ["Accessibility", "Frontend", "Audio"],
-  },
-  {
-    title: "Portfolio Refresh",
-    description:
-      "Personal site built to showcase work with a future-proof structure ready for an authenticated admin dashboard and API-driven content.",
-    tags: ["Design systems", "React", "Auth-ready"],
+    link: {
+      href: "https://www.sgsgitafoundation.org/tutor.html",
+      label: "Open SGS Tutor page",
+    },
   },
 ];
 
@@ -135,6 +137,16 @@ export default function App() {
                   <p className="mt-2 text-ink/80 text-sm md:text-base">
                     {project.description}
                   </p>
+                  {project.link && (
+                    <a
+                      href={project.link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 mt-3 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline"
+                    >
+                      {project.link.label}
+                    </a>
+                  )}
                   <div className="mt-3 flex flex-wrap gap-2 text-xs uppercase tracking-wide text-ink/70">
                     {project.tags.map((tag) => (
                       <span
