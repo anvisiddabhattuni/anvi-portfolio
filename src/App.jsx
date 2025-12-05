@@ -225,9 +225,7 @@ export default function App() {
             </div>
 
             <p className="mt-4 text-sm md:text-base text-ink/80 leading-relaxed">
-              I translate complex ideas into clear, aesthetic experiences and am
-              currently evolving this portfolio into a data-backed platform with
-              authenticated admin tools.
+              Pursuing a B.S. in Computer Science at UT Dallas (May 2028). Design & Marketing Officer for ACM UTD, creating visually engaging promos and elevating event branding. Director of Social Media for Kappa Theta Pi, driving community engagement through creative direction and strategic content. Holds a Web Development Certification (Global Career Accelerator, Oct 2025) with UX, HTML, and CSS expertise to craft user-friendly, impactful experiences.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
