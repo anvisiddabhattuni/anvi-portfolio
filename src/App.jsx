@@ -127,7 +127,7 @@ export default function App() {
 
       {/* Content switcher */}
       <main
-        className={`flex justify-center min-h-screen px-6 md:px-12 ${
+        className={`flex justify-center min-h-screen px-6 ${
           activeTab === "about"
             ? "items-start pt-[22vh] md:pt-[26vh] pb-24 md:pb-32"
             : "items-center pt-32 md:pt-40 pb-24 md:pb-32"
@@ -135,21 +135,17 @@ export default function App() {
       >
         {activeTab === "home" && (
           <div className="text-center space-y-8 max-w-4xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-bone/80">
-              UTD CS · Storytelling · Analytics
-            </p>
             <div className="space-y-2">
               <h1 className="font-display text-4xl md:text-5xl tracking-[0.3em] uppercase">
-                Anvi
+                Anvi Siddabhattuni
               </h1>
               <h2 className="font-display text-base md:text-lg tracking-[0.35em] uppercase text-bone/90">
-                Developer &amp; Creative Storyteller
+                University of Texas at Dallas
               </h2>
+              <h4 className="font-display text-base md:text-lg tracking-[0.35em] uppercase text-bone/90">
+                Computer Science and Marketing
+              </h4>
             </div>
-
-            <p className="max-w-3xl mx-auto text-sm md:text-base text-bone/85 leading-relaxed">
-              UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
-            </p>
 
             <div className="flex items-center justify-center gap-[5rem] mt-16 text-[20px] sm:text-[24px] tracking-widerish uppercase flex-wrap">
               <button
@@ -178,7 +174,7 @@ export default function App() {
         )}
 
         {activeTab === "projects" && (
-          <section className="bg-bone/10 text-bone w-full max-w-4xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 border border-bone/20 space-y-8 backdrop-blur">
+          <section className="bg-bone/10 text-bone w-full max-w-3xl rounded-3xl px-6 py-12 shadow-2xl shadow-black/40 border border-bone/20 space-y-8 backdrop-blur">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 Selected Projects
@@ -226,7 +222,7 @@ export default function App() {
         {activeTab === "about" && (
           <>
             <div className="h-40 md:h-56" aria-hidden />
-            <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-8 md:px-16 pt-20 md:pt-24 pb-14 shadow-2xl shadow-black/40 space-y-12 border border-bone/20 backdrop-blur scroll-mt-[18vh] md:scroll-mt-[22vh]">
+            <section className="bg-bone/10 text-bone w-full max-w-4xl rounded-3xl px-6 pt-20 md:pt-24 pb-14 shadow-2xl shadow-black/40 space-y-12 border border-bone/20 backdrop-blur scroll-mt-[18vh] md:scroll-mt-[22vh]">
               <div className="flex items-center justify-between gap-4 flex-wrap space-y-4 md:space-y-0">
                 <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                   About & Experience
@@ -303,7 +299,7 @@ export default function App() {
         )}
 
         {activeTab === "contact" && (
-          <section className="bg-bone/10 text-bone w-full max-w-xl rounded-3xl px-6 md:px-10 py-12 shadow-2xl shadow-black/40 text-center space-y-4 border border-bone/20 backdrop-blur">
+          <section className="bg-bone/10 text-bone w-full max-w-lg rounded-3xl px-6 sm:px-8 md:px-10 lg:px-20 xl:px-28 py-12 shadow-2xl shadow-black/40 text-center space-y-4 border border-bone/20 backdrop-blur">
             <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
               Contact
             </h3>
