@@ -102,14 +102,14 @@ export default function App() {
     >
       {/* Top tab nav */}
       <header className="absolute top-6 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-3 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-6 py-3 text-sm uppercase tracking-widerish">
+        <nav className="flex items-center gap-4 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-8 py-4 text-xl uppercase tracking-widerish">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-6 py-3 rounded-full transition transform duration-150 active:scale-95 shadow-sm ${
+              className={`px-10 py-6 rounded-full transition transform duration-150 active:scale-95 shadow-sm ${
                 activeTab === tab.id
                   ? "bg-bone text-meadow font-semibold"
                   : "text-bone/80 hover:bg-bone/20"
@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-4 mt-4 text-base md:text-lg tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-6 mt-6 text-2xl md:text-3xl tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-12 py-5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
+                className="border border-bone/40 px-16 py-8 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-12 py-5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold mt-2 md:mt-0"
+                className="border border-bone/40 px-16 py-8 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold mt-3 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-12 py-5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
+                className="border border-bone/40 px-16 py-8 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
               >
                 Contact
               </button>
