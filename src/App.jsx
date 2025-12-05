@@ -109,7 +109,7 @@ export default function App() {
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-3 py-1.5 rounded-full transition ${
+              className={`px-3 py-1.5 rounded-full transition transform duration-150 active:scale-95 ${
                 activeTab === tab.id
                   ? "bg-bone text-meadow font-semibold"
                   : "text-bone/80 hover:bg-bone/20"
@@ -122,9 +122,9 @@ export default function App() {
       </header>
 
       {/* Content switcher */}
-      <main className="flex items-center justify-center min-h-screen px-6 md:px-12">
+      <main className="flex items-center justify-center min-h-screen px-6 md:px-12 py-24 md:py-32">
         {activeTab === "home" && (
-          <div className="text-center space-y-6 max-w-4xl">
+          <div className="text-center space-y-8 max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-bone/80">
               UTD CS · Storytelling · Analytics
             </p>
@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-4 mt-2 text-[11px] tracking-widerish uppercase">
+            <div className="flex items-center justify-center gap-4 mt-4 text-[11px] tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition"
+                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition"
+                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition"
+                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
               >
                 Contact
               </button>
@@ -168,7 +168,7 @@ export default function App() {
         )}
 
         {activeTab === "projects" && (
-          <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10">
+          <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-12 shadow-xl shadow-ink/10 space-y-8">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 Selected Projects
@@ -177,11 +177,11 @@ export default function App() {
                 API-ready content
               </span>
             </div>
-            <div className="mt-6 grid gap-6">
+            <div className="grid gap-7">
               {projects.map((project) => (
                 <article
                   key={project.title}
-                  className="border border-ink/10 rounded-xl p-5 bg-white/70"
+                  className="border border-ink/10 rounded-xl p-6 bg-white/70 space-y-3"
                 >
                   <h4 className="font-semibold">{project.title}</h4>
                   <p className="mt-2 text-ink/80 text-sm md:text-base">
@@ -192,12 +192,12 @@ export default function App() {
                       href={project.link.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 mt-3 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline"
+                      className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline"
                     >
                       {project.link.label}
                     </a>
                   )}
-                  <div className="mt-3 flex flex-wrap gap-2 text-xs uppercase tracking-wide text-ink/70">
+                  <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-ink/70">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -214,7 +214,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone text-ink w-full max-w-5xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10 space-y-8">
+          <section className="bg-bone text-ink w-full max-w-5xl rounded-2xl px-6 md:px-12 py-12 shadow-xl shadow-ink/10 space-y-10">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
@@ -228,7 +228,7 @@ export default function App() {
               Pursuing a B.S. in Computer Science at UT Dallas (May 2028). Design & Marketing Officer for ACM UTD, creating visually engaging promos and elevating event branding. Director of Social Media for Kappa Theta Pi, driving community engagement through creative direction and strategic content. Holds a Web Development Certification (Global Career Accelerator, Oct 2025) with UX, HTML, and CSS expertise to craft user-friendly, impactful experiences.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:gap-8 md:grid-cols-2">
               <div className="space-y-3">
                 <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
                   Education
@@ -261,14 +261,14 @@ export default function App() {
               </div>
             </div>
 
-            <div className="space-y-6 text-sm md:text-base">
+            <div className="space-y-7 text-sm md:text-base">
               <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
                 Experience
               </h4>
               {experiences.map((item) => (
                 <div
                   key={item.role}
-                  className="border border-ink/10 rounded-xl p-4 bg-white/70"
+                  className="border border-ink/10 rounded-xl p-5 bg-white/70 space-y-2"
                 >
                   <div className="flex flex-wrap justify-between gap-2">
                     <p className="font-semibold">{item.role}</p>
