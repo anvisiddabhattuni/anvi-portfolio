@@ -106,14 +106,14 @@ export default function App() {
     >
       {/* Top tab nav */}
       <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-14 sm:gap-16 bg-ink/80 backdrop-blur border border-meadow/60 rounded-full px-8 sm:px-10 py-4 text-lg sm:text-xl uppercase tracking-widerish shadow-2xl shadow-black/40">
+        <nav className="flex items-center gap-[3.5rem] sm:gap-[4rem] bg-ink/80 backdrop-blur border border-meadow/60 rounded-full px-8 sm:px-10 py-4 text-lg sm:text-xl uppercase tracking-widerish shadow-2xl shadow-black/40">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-8 sm:px-10 py-3 sm:py-3.5 min-w-[120px] sm:min-w-[150px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow-lg border ${
+              className={`px-7 sm:px-9 py-[10px] sm:py-3 min-w-[110px] sm:min-w-[140px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow-lg border ${
                 activeTab === tab.id
                   ? "bg-meadow text-ink border-meadow ring-4 ring-bone/60 shadow-meadow/70"
                   : "bg-bone text-ink border-bone/70 hover:bg-meadow hover:text-ink hover:border-meadow"
@@ -145,25 +145,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-18 mt-16 text-[22px] sm:text-[26px] tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-[5rem] mt-16 text-[20px] sm:text-[24px] tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-10 sm:px-12 py-6 sm:py-7 rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[170px] sm:min-w-[200px] min-h-[72px]"
+                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-[2.75rem] sm:px-[3rem] py-[1.6rem] sm:py-[1.75rem] rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[160px] sm:min-w-[190px] min-h-[70px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-10 sm:px-12 py-6 sm:py-7 rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[170px] sm:min-w-[200px] min-h-[72px] mt-5 md:mt-0"
+                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-[2.75rem] sm:px-[3rem] py-[1.6rem] sm:py-[1.75rem] rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[160px] sm:min-w-[190px] min-h-[70px] mt-5 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-10 sm:px-12 py-6 sm:py-7 rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[170px] sm:min-w-[200px] min-h-[72px]"
+                className="bg-gradient-to-r from-meadow via-bone to-meadow text-ink border border-meadow/80 ring-4 ring-bone/50 px-[2.75rem] sm:px-[3rem] py-[1.6rem] sm:py-[1.75rem] rounded-full hover:from-bone hover:via-meadow hover:to-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[160px] sm:min-w-[190px] min-h-[70px]"
               >
                 Contact
               </button>
