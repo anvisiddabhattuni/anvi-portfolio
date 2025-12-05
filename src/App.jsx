@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-4 mt-4 text-[11px] tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-4 mt-4 text-xs md:text-sm tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
+                className="border border-bone/40 px-7 py-3.5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
+                className="border border-bone/40 px-7 py-3.5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30 mt-2 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
+                className="border border-bone/40 px-7 py-3.5 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-sm shadow-bone/30"
               >
                 Contact
               </button>
