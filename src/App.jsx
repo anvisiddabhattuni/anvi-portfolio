@@ -10,8 +10,8 @@ const projects = [
   {
     title: "Analytico — Social Media Analytics Platform",
     description:
-      "Web app that automates social analytics and delivers data-driven recommendations from Figma specs to production UI.",
-    tags: ["React", "Tailwind", "Data viz"],
+      "Web platform that automates social analytics, generates reports, and provides strategic recommendations. Built the React + Tailwind UI from Figma and solved pain points around pricing models, analytics compilation, and content manager insights.",
+    tags: ["React", "Tailwind", "Analytics"],
     link: {
       href: "https://www.figma.com/proto/nSEFJQpmWMuCUcJgRgJY3F/Analytico-Storyboard?node-id=1-5&starting-point-node-id=1%3A5&t=ZeobGc86GxGjPhve-1",
       label: "View Figma storyboard",
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "SGS Tutor — Audio-to-Text Matching",
     description:
-      "Accessibility feature that pairs spoken verses with on-screen text to help learners memorize and review quickly.",
+      "Audio-to-text matching feature that pairs spoken verses with on-screen text to improve memorization efficiency for student learners; integrated into the main app to streamline accessibility.",
     tags: ["Accessibility", "Frontend", "Audio"],
     link: {
       href: "https://www.sgsgitafoundation.org/tutor.html",
@@ -31,19 +31,29 @@ const projects = [
 
 const experiences = [
   {
-    role: "Marketing Co-director · ACM UTD",
-    summary:
-      "Led content strategy and video to grow ACM's reach with reels, campaigns, and event coverage.",
-  },
-  {
-    role: "Director of Social Media · Kappa Theta Pi",
-    summary:
-      "Curated cohesive social content to highlight events, members, and drive tech community engagement.",
-  },
-  {
     role: "Data Analytics Extern · Beats by Dre",
     summary:
-      "Analyzed marketing datasets and built streamlined reports to surface campaign insights.",
+      "Analyzed marketing datasets in Google Sheets, partnered with marketing and product teams, and streamlined reporting with ChatGPT to accelerate insights and improve workflow efficiency.",
+  },
+  {
+    role: "Lead Developer · HSBuilds",
+    summary:
+      "Oversaw timelines and stakeholder communication, led dev/design teams on 10+ nonprofit web projects using GitHub, VSCode, HTML, CSS, and JavaScript.",
+  },
+  {
+    role: "Developer (Volunteer) · Karya Siddhi Hanuman Temple",
+    summary:
+      "Developed an audio-to-text feature for SGS Tutor, collaborating to refine accessibility tools adopted by 500+ learners.",
+  },
+  {
+    role: "Marketing Co-director · ACM UTD",
+    summary:
+      "Captured event photography and produced reels and stories in Lightroom, Canva, and Figma to grow ACM's reach; led a cross-functional media team for campaigns.",
+  },
+  {
+    role: "Member/Director of Social Media · Kappa Theta Pi",
+    summary:
+      "Curated and published social media posts to highlight fraternity events; aligned visuals in Canva with brand identity while monitoring engagement.",
   },
 ];
 
@@ -81,7 +91,7 @@ export default function App() {
         {activeTab === "home" && (
           <div className="text-center space-y-6 max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-bone/80">
-              Portfolio · Storytelling · Analytics
+              UTD CS · Storytelling · Analytics
             </p>
             <div className="space-y-2">
               <h1 className="font-display text-4xl md:text-5xl tracking-[0.3em] uppercase">
@@ -93,9 +103,7 @@ export default function App() {
             </div>
 
             <p className="max-w-3xl mx-auto text-sm md:text-base text-bone/85 leading-relaxed">
-              I build data-informed, design-forward experiences. Currently
-              crafting a portfolio platform with secure admin controls and API-driven
-              content so updates stay effortless.
+              UTD computer science student building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-2 text-[11px] tracking-widerish uppercase">
