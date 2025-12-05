@@ -152,14 +152,14 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="underline-offset-4 hover:underline"
+                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="underline-offset-4 hover:underline"
+                className="border border-bone/40 px-6 py-3 rounded-full hover:bg-bone hover:text-meadow transition"
               >
                 Contact
               </button>
