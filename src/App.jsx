@@ -3,20 +3,16 @@ export default function App() {
    <div className="min-h-screen relative overflow-hidden"
      style={{ backgroundColor: "#53693b", color: "#f5f2ea" }}>
 
-      {/* Tiny nav text in corners */}
+      {/* Tiny nav text with breathing room on small screens */}
       <div className="pointer-events-none">
-        <p className="absolute top-6 left-8 text-[10px] tracking-widerish uppercase">
-          Anvi Siddabhattuni — Portfolio
-        </p>
-        <p className="absolute top-6 right-8 text-[10px] tracking-widerish uppercase">
-          Developer & Creative Technologist
-        </p>
-        <p className="absolute bottom-8 left-8 text-[10px] tracking-widerish uppercase">
-          React • Tailwind • Data Analytics
-        </p>
-        <p className="absolute bottom-8 right-8 text-[10px] tracking-widerish uppercase">
-          ACM • KTP • Beats by Dre
-        </p>
+        <div className="absolute inset-x-6 top-8 flex flex-col gap-2 text-[10px] tracking-widerish uppercase md:flex-row md:items-start md:justify-between">
+          <p>Anvi Siddabhattuni — Portfolio</p>
+          <p className="md:text-right">Developer & Creative Technologist</p>
+        </div>
+        <div className="absolute inset-x-6 bottom-10 flex flex-col gap-2 text-[10px] tracking-widerish uppercase md:flex-row md:items-end md:justify-between">
+          <p>React • Tailwind • Data Analytics</p>
+          <p className="md:text-right">ACM • KTP • Beats by Dre</p>
+        </div>
       </div>
 
       {/* Central name */}
