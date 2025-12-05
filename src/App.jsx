@@ -127,8 +127,10 @@ export default function App() {
 
       {/* Content switcher */}
       <main
-        className={`flex justify-center min-h-screen px-6 md:px-12 pt-64 md:pt-72 pb-24 md:pb-32 ${
-          activeTab === "about" ? "items-start" : "items-center"
+        className={`flex justify-center min-h-screen px-6 md:px-12 ${
+          activeTab === "about"
+            ? "items-start pt-[22vh] md:pt-[26vh] pb-24 md:pb-32"
+            : "items-center pt-32 md:pt-40 pb-24 md:pb-32"
         }`}
       >
         {activeTab === "home" && (
@@ -223,9 +225,9 @@ export default function App() {
 
         {activeTab === "about" && (
           <>
-            <div className="h-36 md:h-48" aria-hidden />
-            <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 pt-16 md:pt-20 pb-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-[16rem] md:scroll-mt-[20rem]">
-              <div className="flex items-center justify-between gap-4 flex-wrap space-y-3 md:space-y-0">
+            <div className="h-40 md:h-56" aria-hidden />
+            <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 pt-20 md:pt-24 pb-14 shadow-2xl shadow-black/40 space-y-12 border border-bone/20 backdrop-blur scroll-mt-[18vh] md:scroll-mt-[22vh]">
+              <div className="flex items-center justify-between gap-4 flex-wrap space-y-4 md:space-y-0">
                 <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                   About & Experience
                 </h3>
