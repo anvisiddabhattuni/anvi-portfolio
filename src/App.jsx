@@ -3,18 +3,6 @@ export default function App() {
    <div className="min-h-screen relative overflow-hidden"
      style={{ backgroundColor: "#53693b", color: "#f5f2ea" }}>
 
-      {/* Tiny nav text with breathing room on small screens */}
-      <div className="pointer-events-none">
-        <div className="absolute inset-x-0 top-12 px-8 flex flex-col items-center gap-3 text-center text-[9px] tracking-[0.2em] leading-4 uppercase md:top-8 md:text-[10px] md:tracking-widerish">
-          <p className="max-w-[80vw]">Anvi Siddabhattuni — Portfolio</p>
-          <p className="max-w-[80vw]">Developer & Creative Technologist</p>
-        </div>
-        <div className="absolute inset-x-6 bottom-10 flex flex-col gap-2 text-[10px] tracking-widerish uppercase md:flex-row md:items-end md:justify-between">
-          <p>React • Tailwind • Data Analytics</p>
-          <p className="md:text-right">ACM • KTP • Beats by Dre</p>
-        </div>
-      </div>
-
       {/* Central name */}
       <main className="flex items-center justify-center min-h-screen">
         <div className="text-center space-y-4">
