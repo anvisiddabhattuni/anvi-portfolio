@@ -6,6 +6,45 @@ const tabs = [
   { id: "about", label: "About" },
 ];
 
+const projects = [
+  {
+    title: "Analytico — Social Media Analytics Platform",
+    description:
+      "Web app that automates social analytics and delivers data-driven recommendations from Figma specs to production UI.",
+    tags: ["React", "Tailwind", "Data viz"],
+  },
+  {
+    title: "SGS Tutor — Audio-to-Text Matching",
+    description:
+      "Accessibility feature that pairs spoken verses with on-screen text to help learners memorize and review quickly.",
+    tags: ["Accessibility", "Frontend", "Audio"],
+  },
+  {
+    title: "Portfolio Refresh",
+    description:
+      "Personal site built to showcase work with a future-proof structure ready for an authenticated admin dashboard and API-driven content.",
+    tags: ["Design systems", "React", "Auth-ready"],
+  },
+];
+
+const experiences = [
+  {
+    role: "Marketing Co-director · ACM UTD",
+    summary:
+      "Led content strategy and video to grow ACM's reach with reels, campaigns, and event coverage.",
+  },
+  {
+    role: "Director of Social Media · Kappa Theta Pi",
+    summary:
+      "Curated cohesive social content to highlight events, members, and drive tech community engagement.",
+  },
+  {
+    role: "Data Analytics Extern · Beats by Dre",
+    summary:
+      "Analyzed marketing datasets and built streamlined reports to surface campaign insights.",
+  },
+];
+
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
 
@@ -38,23 +77,26 @@ export default function App() {
       {/* Content switcher */}
       <main className="flex items-center justify-center min-h-screen px-6 md:px-12">
         {activeTab === "home" && (
-          <div className="text-center space-y-4 max-w-3xl">
-            <h1 className="font-display text-4xl md:text-5xl tracking-[0.3em] uppercase">
-              Anvi
-            </h1>
-            <h2 className="font-display text-sm md:text-base tracking-[0.4em] uppercase">
-              Developer &amp; Creative Storyteller
-            </h2>
+          <div className="text-center space-y-6 max-w-4xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-bone/80">
+              Portfolio · Storytelling · Analytics
+            </p>
+            <div className="space-y-2">
+              <h1 className="font-display text-4xl md:text-5xl tracking-[0.3em] uppercase">
+                Anvi
+              </h1>
+              <h2 className="font-display text-base md:text-lg tracking-[0.35em] uppercase text-bone/90">
+                Developer &amp; Creative Storyteller
+              </h2>
+            </div>
 
-            <p className="max-w-2xl mx-auto text-sm md:text-base text-bone/85 mt-6 leading-relaxed">
-              I build thoughtful digital experiences at the intersection of
-              <span className="font-semibold"> computer science</span> and
-              <span className="font-semibold"> design</span> — from social media
-              analytics platforms to web experiences for student organizations
-              and nonprofits.
+            <p className="max-w-3xl mx-auto text-sm md:text-base text-bone/85 leading-relaxed">
+              I build data-informed, design-forward experiences. Currently
+              crafting a portfolio platform with secure admin controls and API-driven
+              content so updates stay effortless.
             </p>
 
-            <div className="flex items-center justify-center gap-4 mt-8 text-[11px] tracking-widerish uppercase">
+            <div className="flex items-center justify-center gap-4 mt-2 text-[11px] tracking-widerish uppercase">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
@@ -75,73 +117,67 @@ export default function App() {
 
         {activeTab === "projects" && (
           <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10">
-            <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish mb-6">
-              Selected Projects
-            </h3>
-            <div className="space-y-8 text-sm md:text-base">
-              <article className="border-t border-ink/10 pt-6">
-                <h4 className="font-semibold">
-                  Analytico — Social Media Analytics Platform
-                </h4>
-                <p className="mt-2 text-ink/80">
-                  Web-based platform that automates social media analytics and
-                  generates data-driven recommendations. Built the front-end
-                  using React and Tailwind, bringing Figma designs to life.
-                </p>
-              </article>
-
-              <article className="border-t border-ink/10 pt-6">
-                <h4 className="font-semibold">
-                  SGS Tutor App — Audio-to-Text Matching
-                </h4>
-                <p className="mt-2 text-ink/80">
-                  Designed and implemented an audio-to-text matching feature to
-                  support memorization of the Bhagavad Gita, improving
-                  accessibility for hundreds of learners.
-                </p>
-              </article>
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
+                Selected Projects
+              </h3>
+              <span className="text-xs uppercase tracking-widerish text-ink/60">
+                API-ready content
+              </span>
+            </div>
+            <div className="mt-6 grid gap-6">
+              {projects.map((project) => (
+                <article
+                  key={project.title}
+                  className="border border-ink/10 rounded-xl p-5 bg-white/70"
+                >
+                  <h4 className="font-semibold">{project.title}</h4>
+                  <p className="mt-2 text-ink/80 text-sm md:text-base">
+                    {project.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2 text-xs uppercase tracking-wide text-ink/70">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 rounded-full bg-ink/5 border border-ink/10"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
             </div>
           </section>
         )}
 
         {activeTab === "about" && (
           <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10">
-            <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish mb-6">
-              Experience
-            </h3>
-            <div className="space-y-8 text-sm md:text-base">
-              <div>
-                <h4 className="font-semibold">
-                  Marketing Co-director · ACM UTD
-                </h4>
-                <p className="mt-1 text-ink/75">
-                  Lead content strategy, photography, and short-form video to
-                  grow ACM&apos;s reach and strengthen its brand through reels,
-                  campaigns, and event coverage.
-                </p>
-              </div>
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
+                About & Experience
+              </h3>
+              <span className="text-xs uppercase tracking-widerish text-ink/60">
+                Design × Data × Story
+              </span>
+            </div>
 
-              <div>
-                <h4 className="font-semibold">
-                  Director of Social Media · Kappa Theta Pi
-                </h4>
-                <p className="mt-1 text-ink/75">
-                  Curate cohesive, aesthetic social media content to showcase
-                  events, spotlight members, and drive tech community
-                  engagement.
-                </p>
-              </div>
+            <p className="mt-4 text-sm md:text-base text-ink/80 leading-relaxed">
+              I translate complex ideas into clear, aesthetic experiences and am
+              currently evolving this portfolio into a data-backed platform with
+              authenticated admin tools.
+            </p>
 
-              <div>
-                <h4 className="font-semibold">
-                  Data Analytics Extern · Beats by Dre
-                </h4>
-                <p className="mt-1 text-ink/75">
-                  Analyzed marketing datasets and built streamlined reports in
-                  Google Sheets using AI tools, uncovering insights for campaign
-                  performance and content strategy.
-                </p>
-              </div>
+            <div className="mt-6 space-y-6 text-sm md:text-base">
+              {experiences.map((item) => (
+                <div
+                  key={item.role}
+                  className="border-t border-ink/10 pt-4"
+                >
+                  <h4 className="font-semibold">{item.role}</h4>
+                  <p className="mt-1 text-ink/75">{item.summary}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}
