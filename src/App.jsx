@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-10 mt-12 text-[32px] sm:text-[40px] tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-12 mt-14 text-[32px] sm:text-[40px] tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-24 sm:px-28 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px]"
+                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-24 sm:px-28 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] mt-5 md:mt-0"
+                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px] mt-5 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-24 sm:px-28 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px]"
+                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px]"
               >
                 Contact
               </button>
