@@ -127,8 +127,8 @@ export default function App() {
 
       {/* Content switcher */}
       <main
-        className={`flex justify-center min-h-screen px-6 md:px-12 py-24 md:py-32 ${
-          activeTab === "about" ? "items-start pt-28 md:pt-36" : "items-center"
+        className={`flex justify-center min-h-screen px-6 md:px-12 py-24 md:py-32 pt-32 md:pt-40 ${
+          activeTab === "about" ? "items-start" : "items-center"
         }`}
       >
         {activeTab === "home" && (
@@ -222,7 +222,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur mt-10 md:mt-16">
+          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-48 md:scroll-mt-56 mt-6 md:mt-10">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
