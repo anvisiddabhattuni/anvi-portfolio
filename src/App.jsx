@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-12 mt-14 text-[32px] sm:text-[40px] tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-14 mt-14 text-[28px] sm:text-[34px] tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px]"
+                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px] mt-5 md:mt-0"
+                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px] mt-5 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-24 sm:px-28 py-14 sm:py-16 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[230px] sm:min-w-[280px] min-h-[92px] sm:min-h-[110px]"
+                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px]"
               >
                 Contact
               </button>
@@ -322,7 +322,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab("projects")}
-              className="mt-8 border border-ink/20 px-20 py-10 rounded-full text-2xl uppercase tracking-widerish hover:bg-ink hover:text-bone transition transform duration-150 active:scale-95 shadow-2xl shadow-ink/20 font-extrabold"
+              className="mt-8 border border-ink/20 px-16 py-9 rounded-full text-xl uppercase tracking-widerish hover:bg-ink hover:text-bone transition transform duration-150 active:scale-95 shadow-xl shadow-ink/20 font-extrabold"
             >
               View Projects
             </button>
