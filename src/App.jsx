@@ -5,9 +5,9 @@ export default function App() {
 
       {/* Tiny nav text with breathing room on small screens */}
       <div className="pointer-events-none">
-        <div className="absolute inset-x-8 top-12 flex flex-col gap-3 text-[9px] tracking-[0.2em] leading-4 uppercase md:top-8 md:flex-row md:items-start md:justify-between md:text-[10px] md:tracking-widerish">
-          <p className="max-w-[80vw] md:max-w-none">Anvi Siddabhattuni — Portfolio</p>
-          <p className="md:text-right max-w-[80vw] md:max-w-none">Developer & Creative Technologist</p>
+        <div className="absolute inset-x-0 top-12 px-8 flex flex-col items-center gap-3 text-center text-[9px] tracking-[0.2em] leading-4 uppercase md:top-8 md:text-[10px] md:tracking-widerish">
+          <p className="max-w-[80vw]">Anvi Siddabhattuni — Portfolio</p>
+          <p className="max-w-[80vw]">Developer & Creative Technologist</p>
         </div>
         <div className="absolute inset-x-6 bottom-10 flex flex-col gap-2 text-[10px] tracking-widerish uppercase md:flex-row md:items-end md:justify-between">
           <p>React • Tailwind • Data Analytics</p>
