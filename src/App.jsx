@@ -4,6 +4,7 @@ const tabs = [
   { id: "home", label: "Home" },
   { id: "projects", label: "Projects" },
   { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
 ];
 
 const projects = [
@@ -121,6 +122,13 @@ export default function App() {
               >
                 About & Experience
               </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab("contact")}
+                className="underline-offset-4 hover:underline"
+              >
+                Contact
+              </button>
             </div>
           </div>
         )}
@@ -199,6 +207,46 @@ export default function App() {
                 </div>
               ))}
             </div>
+          </section>
+        )}
+
+        {activeTab === "contact" && (
+          <section className="bg-bone text-ink w-full max-w-xl rounded-2xl px-6 md:px-10 py-10 shadow-xl shadow-ink/10 text-center space-y-4">
+            <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
+              Contact
+            </h3>
+            <p className="text-sm md:text-base text-ink/75">
+              Say hi for collaborations, portfolio feedback, or project ideas.
+            </p>
+            <div className="space-y-3 text-sm md:text-base">
+              <a
+                href="mailto:anvimsiddabhattuni@gmail.com"
+                className="block underline-offset-4 hover:underline"
+              >
+                anvimsiddabhattuni@gmail.com
+              </a>
+              <a
+                href="tel:+14693530279"
+                className="block underline-offset-4 hover:underline"
+              >
+                469-353-0279
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anvi-siddabhattuni"
+                target="_blank"
+                rel="noreferrer"
+                className="block underline-offset-4 hover:underline"
+              >
+                linkedin.com/in/anvi-siddabhattuni
+              </a>
+            </div>
+            <button
+              type="button"
+              onClick={() => setActiveTab("projects")}
+              className="mt-4 border border-ink/20 px-5 py-2.5 rounded-full text-xs uppercase tracking-widerish hover:bg-ink hover:text-bone transition"
+            >
+              View Projects
+            </button>
           </section>
         )}
       </main>
