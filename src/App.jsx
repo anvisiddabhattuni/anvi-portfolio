@@ -32,29 +32,63 @@ const projects = [
 
 const experiences = [
   {
-    role: "Data Analytics Extern · Beats by Dre",
-    summary:
-      "Analyzed marketing datasets in Google Sheets, partnered with marketing and product teams, and streamlined reporting with ChatGPT to accelerate insights and improve workflow efficiency.",
+    role: "Design & Marketing Officer · ACM UTD",
+    time: "Aug 2025 – Present · Richardson, TX",
+    bullets: [
+      "Design visually engaging posts and promos in Figma/Canva to strengthen ACM's online presence.",
+      "Capture and edit event photography to showcase the community and initiatives.",
+      "Elevate event branding to clearly communicate ACM's mission and values.",
+    ],
+  },
+  {
+    role: "Director of Social Media · Kappa Theta Pi",
+    time: "Aug 2025 – Present · Richardson, TX",
+    bullets: [
+      "Partner with VP Marketing to plan and design engaging social content.",
+      "Provide creative direction and feedback to keep brand consistent across platforms.",
+      "Highlight chapter events, wins, and member stories to drive engagement.",
+    ],
+  },
+  {
+    role: "Data Analyst Extern · Beats by Dre",
+    time: "Dec 2024 – Feb 2025",
+    bullets: [
+      "Analyzed qualitative and quantitative data to support strategic marketing decisions.",
+      "Performed data cleaning and visualization to keep insights clear and reliable.",
+      "Built reports/dashboards with actionable recommendations for stakeholders.",
+    ],
   },
   {
     role: "Lead Developer · HSBuilds",
-    summary:
-      "Oversaw timelines and stakeholder communication, led dev/design teams on 10+ nonprofit web projects using GitHub, VSCode, HTML, CSS, and JavaScript.",
+    time: "Aug 2023 – Aug 2024 · Frisco, TX (Hybrid)",
+    bullets: [
+      "Led timelines and stakeholder comms across 10+ nonprofit web projects.",
+      "Designed user-friendly interfaces in HTML, CSS, and JavaScript.",
+      "Collaborated with dev/design teams to ship responsive, on-time sites.",
+    ],
   },
   {
     role: "Developer (Volunteer) · Karya Siddhi Hanuman Temple",
-    summary:
-      "Developed an audio-to-text feature for SGS Tutor, collaborating to refine accessibility tools adopted by 500+ learners.",
+    time: "Jun 2021 – 2022",
+    bullets: [
+      "Built audio-to-text feature for SGS Tutor, refining accessibility tools adopted by 500+ learners.",
+      "Collaborated with developers to enhance online education resources for spiritual study programs.",
+    ],
   },
+];
+
+const education = [
   {
-    role: "Marketing Co-director · ACM UTD",
-    summary:
-      "Captured event photography and produced reels and stories in Lightroom, Canva, and Figma to grow ACM's reach; led a cross-functional media team for campaigns.",
+    school: "University of Texas at Dallas — B.S. Computer Science",
+    detail: "Expected May 2028 · Richardson, TX",
   },
+];
+
+const certifications = [
   {
-    role: "Member/Director of Social Media · Kappa Theta Pi",
-    summary:
-      "Curated and published social media posts to highlight fraternity events; aligned visuals in Canva with brand identity while monitoring engagement.",
+    name: "Web Development Certification — The Global Career Accelerator",
+    time: "Issued Oct 2025 · Credential ID 163460074",
+    href: "https://www.credential.net/cb2df851-dbc7-48c6-a3d9-944c13ddd559#acc.YSm5Lnve",
   },
 ];
 
@@ -104,7 +138,7 @@ export default function App() {
             </div>
 
             <p className="max-w-3xl mx-auto text-sm md:text-base text-bone/85 leading-relaxed">
-              UTD computer science student building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
+              UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-2 text-[11px] tracking-widerish uppercase">
@@ -180,7 +214,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10">
+          <section className="bg-bone text-ink w-full max-w-5xl rounded-2xl px-6 md:px-12 py-10 shadow-xl shadow-ink/10 space-y-8">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
@@ -196,14 +230,61 @@ export default function App() {
               authenticated admin tools.
             </p>
 
-            <div className="mt-6 space-y-6 text-sm md:text-base">
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="space-y-3">
+                <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                  Education
+                </h4>
+                {education.map((edu) => (
+                  <div key={edu.school} className="border border-ink/10 rounded-xl p-4 bg-white/70 text-sm md:text-base">
+                    <p className="font-semibold">{edu.school}</p>
+                    <p className="text-ink/70 mt-1">{edu.detail}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-3">
+                <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                  Certification
+                </h4>
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="border border-ink/10 rounded-xl p-4 bg-white/70 text-sm md:text-base">
+                    <p className="font-semibold">{cert.name}</p>
+                    <p className="text-ink/70 mt-1">{cert.time}</p>
+                    <a
+                      href={cert.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline mt-2"
+                    >
+                      View Credential
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-6 text-sm md:text-base">
+              <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                Experience
+              </h4>
               {experiences.map((item) => (
                 <div
                   key={item.role}
-                  className="border-t border-ink/10 pt-4"
+                  className="border border-ink/10 rounded-xl p-4 bg-white/70"
                 >
-                  <h4 className="font-semibold">{item.role}</h4>
-                  <p className="mt-1 text-ink/75">{item.summary}</p>
+                  <div className="flex flex-wrap justify-between gap-2">
+                    <p className="font-semibold">{item.role}</p>
+                    {item.time && (
+                      <p className="text-ink/60 text-xs uppercase tracking-wide">
+                        {item.time}
+                      </p>
+                    )}
+                  </div>
+                  <ul className="mt-2 space-y-2 text-ink/75 list-disc list-inside">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
