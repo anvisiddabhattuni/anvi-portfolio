@@ -101,15 +101,15 @@ export default function App() {
       style={{ backgroundColor: "#53693b", color: "#f5f2ea" }}
     >
       {/* Top tab nav */}
-      <header className="absolute top-6 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-5 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-10 py-5 text-2xl uppercase tracking-widerish">
+      <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
+        <nav className="flex items-center gap-6 sm:gap-8 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-12 py-6 text-3xl sm:text-4xl uppercase tracking-widerish shadow-lg shadow-bone/20">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-14 py-7 rounded-full transition transform duration-150 active:scale-95 shadow ${
+              className={`px-16 sm:px-20 py-8 sm:py-10 rounded-full font-bold transition transform duration-150 active:scale-95 shadow ${
                 activeTab === tab.id
                   ? "bg-bone text-meadow font-semibold"
                   : "text-bone/80 hover:bg-bone/20"
@@ -141,25 +141,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-8 mt-8 text-3xl md:text-4xl tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-8 mt-10 text-3xl sm:text-4xl tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-20 py-10 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
+                className="border border-bone/40 px-20 sm:px-24 py-10 sm:py-12 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-xl shadow-bone/30 font-bold"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-20 py-10 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold mt-4 md:mt-0"
+                className="border border-bone/40 px-20 sm:px-24 py-10 sm:py-12 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-xl shadow-bone/30 font-bold mt-4 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-20 py-10 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-lg shadow-bone/30 font-semibold"
+                className="border border-bone/40 px-20 sm:px-24 py-10 sm:py-12 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-xl shadow-bone/30 font-bold"
               >
                 Contact
               </button>
@@ -322,7 +322,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab("projects")}
-              className="mt-5 border border-ink/20 px-8 py-4 rounded-full text-sm uppercase tracking-widerish hover:bg-ink hover:text-bone transition transform duration-150 active:scale-95 shadow-md shadow-ink/20"
+              className="mt-6 border border-ink/20 px-16 py-8 rounded-full text-xl uppercase tracking-widerish hover:bg-ink hover:text-bone transition transform duration-150 active:scale-95 shadow-xl shadow-ink/20 font-bold"
             >
               View Projects
             </button>
