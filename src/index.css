@@ -10,6 +10,22 @@ body {
     SFMono-Regular, system-ui, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Galderglynn Esquire W 00 Book", Georgia, "Times New Roman", serif;
+}
+
+button,
+a,
+p,
+span {
+  font-family: "JetBrains Mono Variablefont Wght", "JetBrains Mono", ui-monospace,
+    SFMono-Regular, system-ui, sans-serif;
+}
+
 #root {
   @apply min-h-screen;
 }
