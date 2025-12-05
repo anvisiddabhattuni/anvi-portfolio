@@ -126,7 +126,11 @@ export default function App() {
       </header>
 
       {/* Content switcher */}
-      <main className="flex items-center justify-center min-h-screen px-6 md:px-12 py-24 md:py-32">
+      <main
+        className={`flex justify-center min-h-screen px-6 md:px-12 py-24 md:py-32 ${
+          activeTab === "about" ? "items-start pt-28 md:pt-36" : "items-center"
+        }`}
+      >
         {activeTab === "home" && (
           <div className="text-center space-y-8 max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-bone/80">
@@ -218,7 +222,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur mt-24 md:mt-32">
+          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur mt-10 md:mt-16">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
