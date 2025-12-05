@@ -222,79 +222,82 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 pt-24 md:pt-28 pb-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-[14rem] md:scroll-mt-[18rem] mt-0">
-            <div className="flex items-center justify-between gap-4 flex-wrap space-y-3 md:space-y-0">
-              <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
-                About & Experience
-              </h3>
-              <span className="text-xs uppercase tracking-widerish text-ink/60 block mt-2">
-                Design × Data × Story
-              </span>
-            </div>
-
-            <p className="mt-4 text-sm md:text-base text-bone/80 leading-relaxed">
-              Pursuing a B.S. in Computer Science at UT Dallas (May 2028). Design & Marketing Officer for ACM UTD, creating visually engaging promos and elevating event branding. Director of Social Media for Kappa Theta Pi, driving community engagement through creative direction and strategic content. Holds a Web Development Certification (Global Career Accelerator, Oct 2025) with UX, HTML, and CSS expertise to craft user-friendly, impactful experiences.
-            </p>
-
-            <div className="grid gap-6 md:gap-8 md:grid-cols-2">
-              <div className="space-y-3">
-                <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
-                  Education
-                </h4>
-                {education.map((edu) => (
-                  <div key={edu.school} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
-                    <p className="font-semibold">{edu.school}</p>
-                    <p className="text-ink/70 mt-1">{edu.detail}</p>
-                  </div>
-                ))}
+          <>
+            <div className="h-36 md:h-48" aria-hidden />
+            <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 pt-16 md:pt-20 pb-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-[16rem] md:scroll-mt-[20rem]">
+              <div className="flex items-center justify-between gap-4 flex-wrap space-y-3 md:space-y-0">
+                <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
+                  About & Experience
+                </h3>
+                <span className="text-xs uppercase tracking-widerish text-ink/60 block mt-2">
+                  Design × Data × Story
+                </span>
               </div>
-              <div className="space-y-3">
-                <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
-                  Certification
-                </h4>
-                {certifications.map((cert) => (
-                  <div key={cert.name} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
-                    <p className="font-semibold">{cert.name}</p>
-                    <p className="text-ink/70 mt-1">{cert.time}</p>
-                    <a
-                      href={cert.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline mt-2"
-                    >
-                      View Credential
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            <div className="space-y-7 text-sm md:text-base">
+              <p className="mt-4 text-sm md:text-base text-bone/80 leading-relaxed">
+                Pursuing a B.S. in Computer Science at UT Dallas (May 2028). Design & Marketing Officer for ACM UTD, creating visually engaging promos and elevating event branding. Director of Social Media for Kappa Theta Pi, driving community engagement through creative direction and strategic content. Holds a Web Development Certification (Global Career Accelerator, Oct 2025) with UX, HTML, and CSS expertise to craft user-friendly, impactful experiences.
+              </p>
+
+              <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+                <div className="space-y-3">
+                  <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                    Education
+                  </h4>
+                  {education.map((edu) => (
+                    <div key={edu.school} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
+                      <p className="font-semibold">{edu.school}</p>
+                      <p className="text-ink/70 mt-1">{edu.detail}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                    Certification
+                  </h4>
+                  {certifications.map((cert) => (
+                    <div key={cert.name} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
+                      <p className="font-semibold">{cert.name}</p>
+                      <p className="text-ink/70 mt-1">{cert.time}</p>
+                      <a
+                        href={cert.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline mt-2"
+                      >
+                        View Credential
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-7 text-sm md:text-base">
                 <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
                   Experience
                 </h4>
-              {experiences.map((item) => (
-                <div
-                  key={item.role}
-                  className="border border-bone/20 rounded-2xl p-5 bg-ink/40 space-y-2 shadow-lg shadow-black/30"
-                >
-                  <div className="flex flex-wrap justify-between gap-2">
-                    <p className="font-semibold">{item.role}</p>
-                    {item.time && (
-                      <p className="text-bone/70 text-xs uppercase tracking-wide">
-                        {item.time}
-                      </p>
-                    )}
+                {experiences.map((item) => (
+                  <div
+                    key={item.role}
+                    className="border border-bone/20 rounded-2xl p-5 bg-ink/40 space-y-2 shadow-lg shadow-black/30"
+                  >
+                    <div className="flex flex-wrap justify-between gap-2">
+                      <p className="font-semibold">{item.role}</p>
+                      {item.time && (
+                        <p className="text-bone/70 text-xs uppercase tracking-wide">
+                          {item.time}
+                        </p>
+                      )}
+                    </div>
+                    <ul className="mt-2 space-y-2 text-bone/80 list-disc list-inside">
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="mt-2 space-y-2 text-bone/80 list-disc list-inside">
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          </>
         )}
 
         {activeTab === "contact" && (
