@@ -224,7 +224,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-48 md:scroll-mt-56 mt-12 md:mt-20">
+          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 pt-24 md:pt-28 pb-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur scroll-mt-48 md:scroll-mt-56 mt-12 md:mt-20">
             <div className="flex items-center justify-between gap-4 flex-wrap space-y-3 md:space-y-0">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
