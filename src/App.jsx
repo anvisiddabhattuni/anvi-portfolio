@@ -227,7 +227,7 @@ export default function App() {
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
               </h3>
-              <span className="text-xs uppercase tracking-widerish text-ink/60">
+              <span className="text-xs uppercase tracking-widerish text-ink/60 mt-3 md:mt-4 block">
                 Design × Data × Story
               </span>
             </div>
