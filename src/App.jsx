@@ -100,13 +100,13 @@ export default function App() {
       className="min-h-screen relative overflow-hidden"
       style={{
         background:
-          "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 35%), radial-gradient(circle at 80% 0%, rgba(120, 180, 140, 0.12), transparent 30%), linear-gradient(145deg, #0d1015, #0b0d10 60%, #0f1c1a)",
-        color: "#f3f1ec",
+          "radial-gradient(circle at 20% 20%, rgba(245, 245, 220, 0.08), transparent 35%), radial-gradient(circle at 80% 0%, rgba(210, 180, 140, 0.14), transparent 30%), linear-gradient(145deg, #14120d, #0f0d0a 60%, #1a1610)",
+        color: "#f5f5dc",
       }}
     >
       {/* Top tab nav */}
       <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-6 sm:gap-8 bg-white/10 backdrop-blur border border-white/15 rounded-full px-10 sm:px-12 py-5 text-xl sm:text-2xl uppercase tracking-widerish shadow-2xl shadow-black/30">
+        <nav className="flex items-center gap-6 sm:gap-8 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-10 sm:px-12 py-5 text-xl sm:text-2xl uppercase tracking-widerish shadow-2xl shadow-black/30">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -115,8 +115,8 @@ export default function App() {
               aria-pressed={activeTab === tab.id}
               className={`px-10 sm:px-14 py-4 sm:py-5 min-w-[150px] sm:min-w-[180px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow ${
                 activeTab === tab.id
-                  ? "bg-white text-ink shadow-white/40"
-                  : "text-white/80 hover:bg-white/10"
+                  ? "bg-bone text-ink shadow-bone/40"
+                  : "text-bone/80 hover:bg-bone/10"
               }`}
             >
               {tab.label}
@@ -149,21 +149,21 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
+                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px] mt-4 md:mt-0"
+                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px] mt-4 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
+                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
               >
                 Contact
               </button>
@@ -172,12 +172,12 @@ export default function App() {
         )}
 
         {activeTab === "projects" && (
-          <section className="bg-white/8 text-bone w-full max-w-4xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 border border-white/10 space-y-8 backdrop-blur">
+          <section className="bg-bone/10 text-bone w-full max-w-4xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 border border-bone/20 space-y-8 backdrop-blur">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 Selected Projects
               </h3>
-              <span className="text-xs uppercase tracking-widerish text-ink/60">
+              <span className="text-xs uppercase tracking-widerish text-bone/70">
                 API-ready content
               </span>
             </div>
@@ -185,7 +185,7 @@ export default function App() {
               {projects.map((project) => (
                 <article
                   key={project.title}
-                  className="border border-white/10 rounded-2xl p-6 bg-white/5 space-y-3 shadow-lg shadow-black/20"
+                  className="border border-bone/20 rounded-2xl p-6 bg-ink/40 space-y-3 shadow-lg shadow-black/30"
                 >
                   <h4 className="font-semibold">{project.title}</h4>
                   <p className="mt-2 text-bone/80 text-sm md:text-base">
@@ -218,7 +218,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-white/8 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-white/10 backdrop-blur">
+          <section className="bg-bone/10 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-bone/20 backdrop-blur">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
@@ -238,7 +238,7 @@ export default function App() {
                   Education
                 </h4>
                 {education.map((edu) => (
-                  <div key={edu.school} className="border border-ink/10 rounded-xl p-4 bg-white/70 text-sm md:text-base">
+                  <div key={edu.school} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
                     <p className="font-semibold">{edu.school}</p>
                     <p className="text-ink/70 mt-1">{edu.detail}</p>
                   </div>
@@ -249,7 +249,7 @@ export default function App() {
                   Certification
                 </h4>
                 {certifications.map((cert) => (
-                  <div key={cert.name} className="border border-ink/10 rounded-xl p-4 bg-white/70 text-sm md:text-base">
+                  <div key={cert.name} className="border border-bone/25 rounded-xl p-4 bg-ink/40 text-sm md:text-base shadow-inner shadow-black/20">
                     <p className="font-semibold">{cert.name}</p>
                     <p className="text-ink/70 mt-1">{cert.time}</p>
                     <a
@@ -272,12 +272,12 @@ export default function App() {
               {experiences.map((item) => (
                 <div
                   key={item.role}
-                  className="border border-white/10 rounded-2xl p-5 bg-white/5 space-y-2 shadow-lg shadow-black/20"
+                  className="border border-bone/20 rounded-2xl p-5 bg-ink/40 space-y-2 shadow-lg shadow-black/30"
                 >
                   <div className="flex flex-wrap justify-between gap-2">
                     <p className="font-semibold">{item.role}</p>
                     {item.time && (
-                      <p className="text-bone/60 text-xs uppercase tracking-wide">
+                      <p className="text-bone/70 text-xs uppercase tracking-wide">
                         {item.time}
                       </p>
                     )}
@@ -294,7 +294,7 @@ export default function App() {
         )}
 
         {activeTab === "contact" && (
-          <section className="bg-white/10 text-bone w-full max-w-xl rounded-3xl px-6 md:px-10 py-12 shadow-2xl shadow-black/40 text-center space-y-4 border border-white/10 backdrop-blur">
+          <section className="bg-bone/10 text-bone w-full max-w-xl rounded-3xl px-6 md:px-10 py-12 shadow-2xl shadow-black/40 text-center space-y-4 border border-bone/20 backdrop-blur">
             <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
               Contact
             </h3>

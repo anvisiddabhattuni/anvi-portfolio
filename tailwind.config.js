@@ -7,12 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        bone: "#f5f2ea",
-        ink: "#111111",
-        meadow: "#53693b",
+        bone: "#f5f5dc", // beige
+        ink: "#14120d",  // deep brown/black
+        meadow: "#d2b48c", // tan accent
       },
       fontFamily: {
-        display: ['"Space Grotesk"', "Inter", "system-ui", "sans-serif"],
+        display: [
+          '"Galderglynn Esquire W 00 Book"',
+          "Georgia",
+          "Times New Roman",
+          "serif",
+        ],
+        sans: [
+          '"JetBrains Mono Variablefont Wght"',
+          '"JetBrains Mono"',
+          "ui-monospace",
+          "SFMono-Regular",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       letterSpacing: {
         widerish: "0.28em",

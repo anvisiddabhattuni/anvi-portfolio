@@ -4,9 +4,10 @@
 
 body {
   @apply antialiased;
-  background: #0b0d10;
-  color: #f3f1ec;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  background: #14120d;
+  color: #f5f5dc;
+  font-family: "JetBrains Mono Variablefont Wght", "JetBrains Mono", ui-monospace,
+    SFMono-Regular, system-ui, sans-serif;
 }
 
 #root {
