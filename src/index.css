@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 body {
-  /* use direct color values instead of bg-bone/text-ink */
   @apply antialiased;
-  background-color: #f5f2ea; /* bone */
-  color: #111111;           /* ink */
+  background: #0b0d10;
+  color: #f3f1ec;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
 }
 

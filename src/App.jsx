@@ -98,21 +98,25 @@ export default function App() {
   return (
     <div
       className="min-h-screen relative overflow-hidden"
-      style={{ backgroundColor: "#53693b", color: "#f5f2ea" }}
+      style={{
+        background:
+          "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 35%), radial-gradient(circle at 80% 0%, rgba(120, 180, 140, 0.12), transparent 30%), linear-gradient(145deg, #0d1015, #0b0d10 60%, #0f1c1a)",
+        color: "#f3f1ec",
+      }}
     >
       {/* Top tab nav */}
       <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-8 sm:gap-10 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-14 py-7 text-[32px] sm:text-[40px] uppercase tracking-widerish shadow-xl shadow-bone/20">
+        <nav className="flex items-center gap-6 sm:gap-8 bg-white/10 backdrop-blur border border-white/15 rounded-full px-10 sm:px-12 py-5 text-xl sm:text-2xl uppercase tracking-widerish shadow-2xl shadow-black/30">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-20 sm:px-24 py-9 sm:py-11 min-w-[180px] sm:min-w-[210px] rounded-full font-bold transition transform duration-150 active:scale-95 shadow ${
+              className={`px-10 sm:px-14 py-4 sm:py-5 min-w-[150px] sm:min-w-[180px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow ${
                 activeTab === tab.id
-                  ? "bg-bone text-meadow font-semibold"
-                  : "text-bone/80 hover:bg-bone/20"
+                  ? "bg-white text-ink shadow-white/40"
+                  : "text-white/80 hover:bg-white/10"
               }`}
             >
               {tab.label}
@@ -141,25 +145,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-14 mt-14 text-[28px] sm:text-[34px] tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-10 mt-12 text-xl sm:text-2xl tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px]"
+                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px] mt-5 md:mt-0"
+                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px] mt-4 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/40 px-20 sm:px-24 py-12 sm:py-14 rounded-full hover:bg-bone hover:text-meadow transition transform duration-150 active:scale-95 shadow-2xl shadow-bone/30 font-extrabold min-w-[210px] sm:min-w-[260px] min-h-[84px] sm:min-h-[100px]"
+                className="border border-white/20 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-white hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
               >
                 Contact
               </button>
@@ -168,7 +172,7 @@ export default function App() {
         )}
 
         {activeTab === "projects" && (
-          <section className="bg-bone text-ink w-full max-w-4xl rounded-2xl px-6 md:px-12 py-12 shadow-xl shadow-ink/10 space-y-8">
+          <section className="bg-white/8 text-bone w-full max-w-4xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 border border-white/10 space-y-8 backdrop-blur">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 Selected Projects
@@ -181,10 +185,10 @@ export default function App() {
               {projects.map((project) => (
                 <article
                   key={project.title}
-                  className="border border-ink/10 rounded-xl p-6 bg-white/70 space-y-3"
+                  className="border border-white/10 rounded-2xl p-6 bg-white/5 space-y-3 shadow-lg shadow-black/20"
                 >
                   <h4 className="font-semibold">{project.title}</h4>
-                  <p className="mt-2 text-ink/80 text-sm md:text-base">
+                  <p className="mt-2 text-bone/80 text-sm md:text-base">
                     {project.description}
                   </p>
                   {project.link && (
@@ -192,16 +196,16 @@ export default function App() {
                       href={project.link.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-ink/80 underline-offset-4 hover:underline"
+                      className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-bone/80 underline-offset-4 hover:underline"
                     >
                       {project.link.label}
                     </a>
                   )}
-                  <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-ink/70">
+                  <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-bone/70">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 rounded-full bg-ink/5 border border-ink/10"
+                        className="px-2 py-1 rounded-full bg-white/10 border border-white/15"
                       >
                         {tag}
                       </span>
@@ -214,7 +218,7 @@ export default function App() {
         )}
 
         {activeTab === "about" && (
-          <section className="bg-bone text-ink w-full max-w-5xl rounded-2xl px-6 md:px-12 py-12 shadow-xl shadow-ink/10 space-y-10">
+          <section className="bg-white/8 text-bone w-full max-w-5xl rounded-3xl px-6 md:px-12 py-12 shadow-2xl shadow-black/40 space-y-10 border border-white/10 backdrop-blur">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
                 About & Experience
@@ -224,7 +228,7 @@ export default function App() {
               </span>
             </div>
 
-            <p className="mt-4 text-sm md:text-base text-ink/80 leading-relaxed">
+            <p className="mt-4 text-sm md:text-base text-bone/80 leading-relaxed">
               Pursuing a B.S. in Computer Science at UT Dallas (May 2028). Design & Marketing Officer for ACM UTD, creating visually engaging promos and elevating event branding. Director of Social Media for Kappa Theta Pi, driving community engagement through creative direction and strategic content. Holds a Web Development Certification (Global Career Accelerator, Oct 2025) with UX, HTML, and CSS expertise to craft user-friendly, impactful experiences.
             </p>
 
@@ -262,23 +266,23 @@ export default function App() {
             </div>
 
             <div className="space-y-7 text-sm md:text-base">
-              <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
-                Experience
-              </h4>
+                <h4 className="font-semibold uppercase tracking-wide text-xs text-ink/70">
+                  Experience
+                </h4>
               {experiences.map((item) => (
                 <div
                   key={item.role}
-                  className="border border-ink/10 rounded-xl p-5 bg-white/70 space-y-2"
+                  className="border border-white/10 rounded-2xl p-5 bg-white/5 space-y-2 shadow-lg shadow-black/20"
                 >
                   <div className="flex flex-wrap justify-between gap-2">
                     <p className="font-semibold">{item.role}</p>
                     {item.time && (
-                      <p className="text-ink/60 text-xs uppercase tracking-wide">
+                      <p className="text-bone/60 text-xs uppercase tracking-wide">
                         {item.time}
                       </p>
                     )}
                   </div>
-                  <ul className="mt-2 space-y-2 text-ink/75 list-disc list-inside">
+                  <ul className="mt-2 space-y-2 text-bone/80 list-disc list-inside">
                     {item.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
                     ))}
@@ -290,11 +294,11 @@ export default function App() {
         )}
 
         {activeTab === "contact" && (
-          <section className="bg-bone text-ink w-full max-w-xl rounded-2xl px-6 md:px-10 py-10 shadow-xl shadow-ink/10 text-center space-y-4">
+          <section className="bg-white/10 text-bone w-full max-w-xl rounded-3xl px-6 md:px-10 py-12 shadow-2xl shadow-black/40 text-center space-y-4 border border-white/10 backdrop-blur">
             <h3 className="font-display text-lg md:text-xl uppercase tracking-widerish">
               Contact
             </h3>
-            <p className="text-sm md:text-base text-ink/75">
+            <p className="text-sm md:text-base text-bone/75">
               Say hi for collaborations, portfolio feedback, or project ideas.
             </p>
             <div className="space-y-3 text-sm md:text-base">
