@@ -106,17 +106,17 @@ export default function App() {
     >
       {/* Top tab nav */}
       <header className="absolute top-8 left-0 right-0 flex justify-center px-4">
-        <nav className="flex items-center gap-6 sm:gap-8 bg-bone/10 backdrop-blur border border-bone/20 rounded-full px-10 sm:px-12 py-5 text-xl sm:text-2xl uppercase tracking-widerish shadow-2xl shadow-black/30">
+        <nav className="flex items-center gap-8 sm:gap-10 bg-ink/60 backdrop-blur border border-bone/20 rounded-full px-12 sm:px-14 py-6 text-2xl sm:text-3xl uppercase tracking-widerish shadow-2xl shadow-black/40">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
               aria-pressed={activeTab === tab.id}
-              className={`px-10 sm:px-14 py-4 sm:py-5 min-w-[150px] sm:min-w-[180px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow ${
+              className={`px-12 sm:px-16 py-5 sm:py-6 min-w-[170px] sm:min-w-[200px] rounded-full font-semibold transition transform duration-150 active:scale-95 shadow-lg border border-bone/30 ${
                 activeTab === tab.id
-                  ? "bg-bone text-ink shadow-bone/40"
-                  : "text-bone/80 hover:bg-bone/10"
+                  ? "bg-bone text-ink shadow-bone/50"
+                  : "text-bone/85 hover:bg-meadow hover:text-ink hover:border-meadow/70"
               }`}
             >
               {tab.label}
@@ -145,25 +145,25 @@ export default function App() {
               UTD computer science student (B.S., May 2028) building data-informed, design-forward experiences. From analytics dashboards to accessibility features, I deliver polished React/Tailwind frontends and plan for secure, API-driven content updates.
             </p>
 
-            <div className="flex items-center justify-center gap-10 mt-12 text-xl sm:text-2xl tracking-widerish uppercase flex-wrap">
+            <div className="flex items-center justify-center gap-14 mt-14 text-[30px] sm:text-[36px] tracking-widerish uppercase flex-wrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("projects")}
-                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
+                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
               >
                 View Projects
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("about")}
-                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px] mt-4 md:mt-0"
+                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px] mt-4 md:mt-0"
               >
                 About & Experience
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("contact")}
-                className="border border-bone/25 px-12 sm:px-16 py-6 sm:py-7 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-xl shadow-black/30 font-semibold min-w-[200px] sm:min-w-[230px]"
+                className="bg-meadow text-ink border border-meadow/70 px-16 sm:px-20 py-9 sm:py-11 rounded-full hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-semibold min-w-[230px] sm:min-w-[260px] min-h-[96px]"
               >
                 Contact
               </button>
@@ -326,7 +326,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setActiveTab("projects")}
-              className="mt-8 border border-ink/20 px-16 py-9 rounded-full text-xl uppercase tracking-widerish hover:bg-ink hover:text-bone transition transform duration-150 active:scale-95 shadow-xl shadow-ink/20 font-extrabold"
+              className="mt-10 border border-meadow/70 bg-meadow text-ink px-20 py-10 rounded-full text-2xl uppercase tracking-widerish hover:bg-bone hover:text-ink transition transform duration-150 active:scale-95 shadow-2xl shadow-black/35 font-bold"
             >
               View Projects
             </button>
